@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SendrRequest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/teal_200"
+        android:padding="5dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/RequestNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="RequestNumber"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/YourRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Request" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="15dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/firstPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player1"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/vs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.65"
+                android:gravity="center"
+                android:text="vs" />
+
+            <EditText
+                android:id="@+id/secondPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_design"
+                android:gravity="center"
+                android:hint="Player Name"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/firstResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_design"
+                android:gravity="center"
+                android:hint="Goals"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.65"
+                android:gravity="center"
+                android:text="-" />
+
+            <EditText
+                android:id="@+id/secondResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_design"
+                android:gravity="center"
+                android:hint="Goals"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/SendRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Request" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

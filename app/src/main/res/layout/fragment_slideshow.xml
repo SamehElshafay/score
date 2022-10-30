@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="always">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/background6"
+                    android:elevation="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/player_profile_username"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+
+                            android:elevation="24dp"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textColor="#FDFDFD"
+                            android:textSize="22dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textRANK"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RANK" />
+
+                            <TextView
+                                android:id="@+id/RANK"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:gravity="center"
+                                android:rotation="0"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="26dp"
+                                tools:ignore="MissingConstraints,NotSibling" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textWin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WIN"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/textWinDEC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_horizontal|center_vertical"
+                                tools:ignore="MissingConstraints" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/win"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressWin"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageWin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressWin"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressWin"
+                                    app:layout_constraintStart_toStartOf="@+id/progressWin"
+                                    app:layout_constraintTop_toTopOf="@+id/progressWin"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textLose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LOSE" />
+
+                            <TextView
+                                android:id="@+id/textLoseDEC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_horizontal|center_vertical" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/lose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressLose"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageLose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressLose"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressLose"
+                                    app:layout_constraintStart_toStartOf="@+id/progressLose"
+                                    app:layout_constraintTop_toTopOf="@+id/progressLose"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textDraw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DRAW" />
+
+                            <TextView
+                                android:id="@+id/textDrawDEC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_horizontal|center_vertical" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/draw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressDraw"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageDraw"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressDraw"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressDraw"
+                                    app:layout_constraintStart_toStartOf="@+id/progressDraw"
+                                    app:layout_constraintTop_toTopOf="@+id/progressDraw"
+                                    tools:ignore="MissingConstraints,UnknownId" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textGF"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GF"
+                                tools:ignore="MissingConstraints" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/GF"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressGF"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageGF"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressGF"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressGF"
+                                    app:layout_constraintStart_toStartOf="@+id/progressGF"
+                                    app:layout_constraintTop_toTopOf="@+id/progressGF"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textGA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GA" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/GA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressGA"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageGA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressGA"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressGA"
+                                    app:layout_constraintStart_toStartOf="@+id/progressGA"
+                                    app:layout_constraintTop_toTopOf="@+id/progressGA"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textGD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GD" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/GD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressGD"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageGD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressGD"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressGD"
+                                    app:layout_constraintStart_toStartOf="@+id/progressGD"
+                                    app:layout_constraintTop_toTopOf="@+id/progressGD"
+                                    tools:ignore="MissingConstraints,UnknownId" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textCLEANSHEETS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CLS"
+                                tools:ignore="MissingConstraints" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/CLEANSHEETS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressCLEANSHEETS"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageCLEANSHEETS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressCLEANSHEETS"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressCLEANSHEETS"
+                                    app:layout_constraintStart_toStartOf="@+id/progressCLEANSHEETS"
+                                    app:layout_constraintTop_toTopOf="@+id/progressCLEANSHEETS"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textMATCHES"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MATCHES" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/MATCHES"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressMATCHES"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentageMATCHES"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressMATCHES"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressMATCHES"
+                                    app:layout_constraintStart_toStartOf="@+id/progressMATCHES"
+                                    app:layout_constraintTop_toTopOf="@+id/progressMATCHES"
+                                    tools:ignore="MissingConstraints,NotSibling" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textPOINTS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="POINTS" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/POINTS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:ignore="MissingConstraints">
+
+                                <ProgressBar
+                                    android:id="@+id/progressPOINTS"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    tools:ignore="MissingConstraints"
+                                    tools:progress="70" />
+
+                                <TextView
+                                    android:id="@+id/percentagePOINTS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:rotation="0"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="26dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progressPOINTS"
+                                    app:layout_constraintEnd_toEndOf="@+id/progressPOINTS"
+                                    app:layout_constraintStart_toStartOf="@+id/progressPOINTS"
+                                    app:layout_constraintTop_toTopOf="@+id/progressPOINTS"
+                                    tools:ignore="MissingConstraints,UnknownId" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/player_profile_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="70dp"
+                app:civ_border_color="#0000"
+                app:civ_border_width="3dp"
+                android:layout_marginTop="40dp"
+                android:elevation="24dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
